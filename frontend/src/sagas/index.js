@@ -4,7 +4,7 @@ import { actions,receiveTweets } from "../actions";
 
 const fetchData = async (topic) =>{
     try{
-    const res = await fetch(`http://localhost:3000/api/tweets?topic=${topic}`,{method:'GET'})
+    const res = await fetch(`/api/tweets?topic=${topic}`,{method:'GET'})
     const json = await res.json()
     return json;
     }catch(err){
@@ -15,6 +15,7 @@ const fetchData = async (topic) =>{
 
 function* getTweets(actions) {
   try {
+    console.log(actions.topic)
     const data = yield call(fetchData,actions.topic);
     yield put(receiveTweets(data));
   } catch (e) {

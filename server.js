@@ -1,11 +1,17 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
 const cors = require('cors')
 const env = require('dotenv').config().parsed;
 const fetch = require('node-fetch');
 
+const path = require('path');
+
 app.use(cors());
 
 const api = 'https://api.twitter.com/2/tweets/search/recent?query='
+
+app.use('/', express.static(path.join(__dirname, 'frontend', 'dist')))
+
 
 const getTweets = async (topic) => {
     return await fetch(`${api}${topic}`, {
@@ -25,6 +31,10 @@ app.get('/api/tweets',async (req,res)=>{
     else{
         res.status(404).json({error:"query parameter required!!"})
     }
+})
+
+app.use('*',(req,res)=>{
+    res.send(path.join(__dirname,'frontend','dist/index.html'));
 })
 
 app.listen(3000, () => {
