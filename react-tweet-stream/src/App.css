@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.App li{
+  list-style: none;
+}
+
+.highlight{
+color:#3B82F6;
+}

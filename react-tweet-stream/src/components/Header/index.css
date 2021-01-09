@@ -1,0 +1,27 @@
+.btn-group button{
+    background-color: transparent;
+    border:0;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .btn-group button.active{
+    background:#3B82F6;
+    color:#FFF;
+    border:none
+  }
+  .btn-group button.inactive{
+    background-color: transparent;
+    color:#111827;
+  }
+  .btn-group button:nth-child(1){
+    border-right: 1px solid #ddd;
+  }
+  .btn-group{
+    border:1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+ nav{
+     padding: 20px;
+ }
+  

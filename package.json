@@ -1,0 +1,31 @@
+{
+  "name": "react-tweet-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep933/react-tweet-stream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deep933/react-tweet-stream/issues"
+  },
+  "homepage": "https://github.com/deep933/react-tweet-stream#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dot-env": "0.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "needle": "^2.6.0",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "socket.io": "^3.0.5"
+  }
+}
